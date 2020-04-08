@@ -1,5 +1,5 @@
 
-# import the necessary packages
+# importer ceci
 from skimage.measure import compare_ssim
 import imutils
 import cv2
@@ -7,7 +7,7 @@ import cv2
 # construct the argument parse and parse the arguments
 
 
-# load the two input images
+# images
 imageA = cv2.imread("banana.jpg")
 imageB = cv2.imread("banana2.jpg")
 dim = (500, 500)
