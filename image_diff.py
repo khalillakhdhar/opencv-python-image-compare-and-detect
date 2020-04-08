@@ -24,7 +24,7 @@ grayB = cv2.cvtColor(imageB, cv2.COLOR_BGR2GRAY)
 diff = (diff * 255).astype("uint8")
 print("indice de simularité SSIM: {}".format(score))
 
-# threshold the difference image, followed by finding contours to
+# detection de contour
 # obtain the regions of the two input images that differ
 thresh = cv2.threshold(diff, 0, 255,
 	cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
