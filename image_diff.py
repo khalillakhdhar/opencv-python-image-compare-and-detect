@@ -39,7 +39,7 @@ for c in cnts:
 	cv2.rectangle(imageA, (x, y), (x + w, y + h), (0, 0, 255), 2)
 	cv2.rectangle(imageB, (x, y), (x + w, y + h), (0, 0, 255), 2)
 
-# show the output images
+# afficher les images
 cv2.imshow("Original", imageA)
 cv2.imshow("Modified", imageB)
 cv2.imshow("Diff", diff)
