@@ -4,7 +4,7 @@ from skimage.measure import compare_ssim
 import imutils
 import cv2
 
-# construct the argument parse and parse the arguments
+# construction
 
 
 # images
@@ -14,12 +14,12 @@ dim = (500, 500)
 
 imageA = cv2.resize(imageA, dim, interpolation = cv2.INTER_AREA)
 imageB = cv2.resize(imageB, dim, interpolation = cv2.INTER_AREA)
-# convert the images to grayscale
+# convertion en gris
 grayA = cv2.cvtColor(imageA, cv2.COLOR_BGR2GRAY)
 grayB = cv2.cvtColor(imageB, cv2.COLOR_BGR2GRAY)
 
-# compute the Structural Similarity Index (SSIM) between the two
-# images, ensuring that the difference image is returned
+# Calcule de 'Structural Similarity '(SSIM) 
+# images, assure le retour
 (score, diff) = compare_ssim(grayA, grayB, full=True)
 diff = (diff * 255).astype("uint8")
 print("indice de simularité SSIM: {}".format(score))
