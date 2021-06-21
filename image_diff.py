@@ -1,6 +1,6 @@
 
 # importer ceci
-from skimage.measure import compare_ssim
+from skimage.metrics import structural_similarity as ss 
 import imutils
 import cv2
 
@@ -20,7 +20,7 @@ grayB = cv2.cvtColor(imageB, cv2.COLOR_BGR2GRAY)
 
 # Calcule de 'Structural Similarity '(SSIM) 
 # images, assure le retour
-(score, diff) = compare_ssim(grayA, grayB, full=True)
+(score, diff) = ss(grayA, grayB, full=True)
 diff = (diff * 255).astype("uint8")
 print("indice de simularité SSIM: {}".format(score))
 
